@@ -1,5 +1,4 @@
 # ReadMe
-===================
 
 Worked out solutions to exercises in chapter4: FILE I/O: The Universal I/O Model
 
@@ -16,7 +15,12 @@ gcc exercise_4_1.c -D_NDEBUG -g -Wno-format -o mytee
 
 
 ####Usage: 
-mytee [-a] [-b buffersize] -f <filename>
+mytee [-a] [-b buffersize] -f filename
+
 `-a` : append output to file
+
 `-b` : specify buffer size used to read from standard input
+
 `-f` : full file/path/name used to save the output
+
+For example: man 2 open|./mytee -b 1024 -f test.txt
