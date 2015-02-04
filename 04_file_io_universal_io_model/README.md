@@ -24,3 +24,21 @@ mytee [-a] [-b buffersize] -f filename
 `-f` : full file/path/name used to save the output
 
 For example: man 2 open|./mytee -b 1024 -f test.txt
+
+## Exercise 4-2
+
+###Question:
+Write a program like cp that, when used to copy a regular file that contains holes
+(sequences of null bytes), also creates corresponding holes in the target file.
+
+###Answer: 
+see exercise_4_2.c.
+
+####Compile: 
+gcc exercise_4_2.c -D_NDEBUG -g -Wno-format -o cphole
+
+
+####Usage: 
+cphole srcfile dstfile
+
+For example: cphole a.txt b.txt
