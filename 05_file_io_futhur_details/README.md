@@ -81,4 +81,39 @@ For example:
 
 
 
+## Exercise 5-4
 
+###Question:
+    Implement dup() and dup2() using fcntl() and, where necessary, close(). (You may
+    ignore the fact that dup2() and fcntl() return different errno values for some error
+    cases.) For dup2(), remember to handle the special case where oldfd equals newfd. In
+    this case, you should check whether oldfd is valid, which can be done by, for example,
+    checking if fcntl(oldfd, F_GETFL) succeeds. If oldfd is not valid, then the function
+    should return –1 with errno set to EBADF.
+
+###Answer: 
+see exercise_5_4.c.
+
+####Compile: 
+gcc exercise_5_4.c -D_NDEBUG -g -Wno-format -o program
+
+
+####Usage: 
+null
+
+
+## Exercise 5-5
+
+###Question:
+    Write a program to verify that duplicated file descriptors share a file offset value
+    and open file status flags.
+
+###Answer: 
+see exercise_5_5.c.
+
+####Compile: 
+gcc exercise_5_5.c -D_NDEBUG -g -Wno-format -o program
+
+
+####Usage: 
+program 
